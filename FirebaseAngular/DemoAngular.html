@@ -1,0 +1,108 @@
+﻿<!--<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script src="FirebaseDemo.js"></script>
+    
+</head>
+<body>
+    <div ng-controller="feedListController">
+        <table class="table">
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Age
+                </td>
+                <td>
+                    Place
+                </td>
+            </tr>
+            <tr ng-repeat=" feeds in feedsList">
+                <td>{{feeds.Name}}</td>
+                <td>{{feeds.Url}}</td>
+                <td>{{feeds.Description}}</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" ng-model="feedsList.Name" /><br />
+                </td>
+                <td>
+                    <input type="text" ng-model="feedsList.Url" /><br />
+                </td>
+                <td>
+                    <input type="text" ng-model="feedsList.Description" /><br />
+                </td>
+                <td>
+                    <button type="submit" ng-click="save()">Add Feed</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>-->
+
+<html ng-app="sampleApp">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAUnGXHtvn0x8ujYiTp6qre5gIGoo8X99o",
+            authDomain: "angulardemo-fc09d.firebaseapp.com",
+            databaseURL: "https://angulardemo-fc09d.firebaseio.com",
+            storageBucket: "angulardemo-fc09d.appspot.com",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <script src="FirebaseDemo.js"></script>
+</head>
+<body ng-controller="SampleCtrl">
+    <ul>
+        <li ng-repeat="message in messages">{{ message.text }}</li>
+    </ul>
+    <table class="table">
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                Age
+            </td>
+            <td>
+                Place
+            </td>
+        </tr>
+        <tr ng-repeat=" feeds in feedsList">
+            <td>{{feeds.Name}}</td>
+            <td>{{feeds.Url}}</td>
+            <td>{{feeds.Description}}</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" ng-model="feedsList.Name" /><br />
+            </td>
+            <td>
+                <input type="text" ng-model="feedsList.Url" /><br />
+            </td>
+            <td>
+                <input type="text" ng-model="feedsList.Description" /><br />
+            </td>
+            <td>
+                <button type="button" ng-click="save()">Add Feed</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
